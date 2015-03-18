@@ -1,8 +1,11 @@
 /**
  * Created by mohammedfadin on 3/15/15.
  */
+import java.util.*;
+
 public class MainProgram
 {
+    private Scanner input = new Scanner(System.in);
     public static void main(String [] argc)
     {
         // Ref SavingsAccount
@@ -16,6 +19,25 @@ public class MainProgram
                 SavingsAccount("Abdullah Fadin", "Saudi Arabia");
         System.out.println(account2.toString());
         System.out.println(account2.getDailyInterest()); //0.0
+
+        /*
+            Let's play with some Arraylist
+            Remember that ArrayList is dynamic,
+            meaning it can exceeds whenever it has to
+            however, you still need to set the initial size
+         */
+        List<SavingsAccount> ownersList = new ArrayList<SavingsAccount>(); // Store account owners here
+        ownersList.add(new SavingsAccount("Mohammed Fadin", "Dhahran", 10000));
+        ownersList.add(new SavingsAccount("Hussein Fadin", "Jeddah", 40000));
+
+        Iterator<SavingsAccount> iterator = ownersList.iterator();
+        System.out.println("Bank Accounts List");
+        while(iterator.hasNext())
+        {
+            String temp = iterator.next().getName();
+            System.out.println(temp);
+        }
+
     }
 
     public static void codeLesson()

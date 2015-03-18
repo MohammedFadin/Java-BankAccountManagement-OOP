@@ -7,7 +7,6 @@ class BankAccount
     private String address;
     private double currentBalance; // Default 0
 
-
     public BankAccount(String name, String address)
     {
         this.name = name;

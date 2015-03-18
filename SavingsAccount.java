@@ -5,7 +5,8 @@ public class SavingsAccount extends BankAccount
 {
     private double roi; // Rate of Interest
 
-    public SavingsAccount(String name, String address) {
+    public SavingsAccount(String name, String address)
+    {
         super(name, address);
     }
 
